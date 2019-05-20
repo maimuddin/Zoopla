@@ -38,6 +38,7 @@ public class TestBase {
 			driver = new FirefoxDriver();
 		}
 		
+		driver.get(prop.getProperty("url"));
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(pagetimeout, TimeUnit.SECONDS);
