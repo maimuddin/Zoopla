@@ -9,6 +9,7 @@ import com.pom.Search_page;
 public class Search_Location extends TestBase {
 	
 	Search_page search;
+	Search_Location s;
 	
 	public Search_Location() {
 		super();
@@ -16,8 +17,9 @@ public class Search_Location extends TestBase {
 	
 	@BeforeMethod
 	public void setup(){
-		initilization();
 		search = new Search_page();
+		s = new Search_Location();
+		initilization();
 	}
 
 	@Test

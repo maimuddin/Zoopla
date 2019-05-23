@@ -17,7 +17,7 @@ public class TestBase {
 	public TestBase(){
 		prop = new Properties();
 		try{
-			FileInputStream fl = new FileInputStream(System.getProperty(""));
+			FileInputStream fl = new FileInputStream(System.getProperty(("user.dir")+"/com.zoopla/src/main/java/com/config/config.properties"));
 			prop.load(fl);
 		}
 		catch(Exception e){
@@ -34,7 +34,7 @@ public class TestBase {
 			driver = new ChromeDriver();
 		}
 		else if (browser.equalsIgnoreCase("Firefox")){
-			System.setProperty("", "");
+			System.setProperty("webdriver.gecko.driver", ("user.dir")+"/com.zoopla/src/main/java/com/util/geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
 		
