@@ -2,24 +2,23 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27404" started-at="2019-05-27T07:38:40Z" finished-at="2019-05-27T07:39:08Z">
+  <suite name="Default suite" duration-ms="26902" started-at="2019-05-27T11:02:45Z" finished-at="2019-05-27T11:03:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27404" started-at="2019-05-27T07:38:40Z" finished-at="2019-05-27T07:39:08Z">
+    <test name="Default test" duration-ms="26902" started-at="2019-05-27T11:02:45Z" finished-at="2019-05-27T11:03:12Z">
       <class name="zoopla.com.zoopla.Search_Location">
-        <test-method status="PASS" signature="setup()[pri:0, instance:zoopla.com.zoopla.Search_Location@11f989e]" name="setup" is-config="true" duration-ms="27374" started-at="2019-05-27T13:08:40Z" finished-at="2019-05-27T13:09:08Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:zoopla.com.zoopla.Search_Location@1c14f68]" name="setup" is-config="true" duration-ms="26870" started-at="2019-05-27T16:32:45Z" finished-at="2019-05-27T16:33:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="search()[pri:0, instance:zoopla.com.zoopla.Search_Location@11f989e]" name="search" duration-ms="0" started-at="2019-05-27T13:09:08Z" finished-at="2019-05-27T13:09:08Z">
+        <test-method status="FAIL" signature="search()[pri:0, instance:zoopla.com.zoopla.Search_Location@1c14f68]" name="search" duration-ms="16" started-at="2019-05-27T16:33:12Z" finished-at="2019-05-27T16:33:12Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy7.sendKeys(Unknown Source)
-	at com.pom.Search_page.searchBox(Search_page.java:23)
-	at zoopla.com.zoopla.Search_Location.search(Search_Location.java:28)
+	at zoopla.com.zoopla.Search_Location.search(Search_Location.java:29)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)

@@ -1,6 +1,5 @@
 package com.base;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -19,9 +18,8 @@ public class TestBase {
 		System.out.println("TestBase");
 		prop = new Properties();
 		try{
-			//FileInputStream fl = new FileInputStream(System.getProperty(("user.dir")+"/com.zoopla/src/main/java/com/config/config.properties"));
-			FileInputStream f1 = new FileInputStream("C:/Users/Shiv Kumar Narang/git/Zoopla/com.zoopla/src/main/java/com/config/config.properties");
-			prop.load(f1);
+			FileInputStream fl = new FileInputStream(System.getProperty("user.dir")+"/src/main/java/com/config/config.properties");
+			prop.load(fl);
 		}
 		catch(Exception e){
 			e.printStackTrace();
@@ -29,8 +27,8 @@ public class TestBase {
 	}
 
 	public static void initilization() {
-		//System.setProperty("webdriver.gecko.driver",
-			//	("user.dir") + "/com.zoopla/src/main/java/com/util/geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver",
+				System.getProperty("user.dir") + "/src/main/java/com/util/geckodriver.exe");
 		String browser = prop.getProperty("browser");
 		pagetimeout = Integer.parseInt(prop.getProperty("pagetimeout"));
 		impli_timeout = Integer.parseInt(prop.getProperty("implicite_timeout"));
@@ -38,7 +36,7 @@ public class TestBase {
 			System.setProperty("", "");
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("Firefox")) {
-			System.setProperty("webdriver.gecko.driver", "C:/Users/Shiv Kumar Narang/git/Zoopla/com.zoopla/src/main/java/com/util/geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/src/main/java/com/util/geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
 		

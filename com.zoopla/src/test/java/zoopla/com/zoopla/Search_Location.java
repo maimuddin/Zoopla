@@ -1,5 +1,6 @@
 package zoopla.com.zoopla;
 
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -19,13 +20,13 @@ public class Search_Location extends TestBase {
 	@BeforeMethod
 	public void setup(){
 		s = new Search_Location();
-		search = new Search_page();
+		search = PageFactory.initElements(driver, Search_page.class);
 		initilization();
 	}
 
 	@Test
 	public void search(){
-		search.searchBox("London");
-		search.searchButton();
+		search.search_box.sendKeys("London");
+		search.search_button.click();
 	}
 }

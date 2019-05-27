@@ -2,29 +2,19 @@ package com.pom;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.How;
 
-import com.base.TestBase;
 
-public class Search_page extends TestBase {
+public class Search_page {
 	
-	@FindBy(xpath = "//input[@id='search-input-location']")
-	WebElement search_box;
+	@FindBy(how = How.XPATH, using = "//input[@id='search-input-location']")
+	public WebElement search_box;
 	
-	@FindBy(xpath = "//button[@id='search-submit']")
-	WebElement search_button;
+	@FindBy(how = How.XPATH, using = "//button[@id='search-submit']")
+	public WebElement search_button;
 	
 	public Search_page() {
-		System.out.println("Search_page");
-		PageFactory.initElements(driver,this);
-	}
-	
-	public void searchBox(String search){
-		search_box.sendKeys(search);
-	}
-	
-	public void searchButton(){
-		search_button.click();
+		//System.out.println("Hello");
 	}
 	
 }
