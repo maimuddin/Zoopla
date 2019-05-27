@@ -20,8 +20,8 @@ public class Search_Location extends TestBase {
 	@BeforeMethod
 	public void setup(){
 		s = new Search_Location();
-		search = PageFactory.initElements(driver, Search_page.class);
 		initilization();
+		search = PageFactory.initElements(driver, Search_page.class);
 	}
 
 	@Test

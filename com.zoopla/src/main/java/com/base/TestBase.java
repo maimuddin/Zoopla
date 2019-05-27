@@ -15,7 +15,6 @@ public class TestBase {
 	private static int impli_timeout;
 
 	public TestBase(){
-		System.out.println("TestBase");
 		prop = new Properties();
 		try{
 			FileInputStream fl = new FileInputStream(System.getProperty("user.dir")+"/src/main/java/com/config/config.properties");
@@ -40,8 +39,6 @@ public class TestBase {
 			driver = new FirefoxDriver();
 		}
 		
-		
-		//driver = new FirefoxDriver();
 		driver.get(prop.getProperty("url"));
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
