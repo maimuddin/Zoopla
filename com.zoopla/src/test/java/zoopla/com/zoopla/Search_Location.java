@@ -14,7 +14,6 @@ public class Search_Location extends TestBase {
 	
 	public Search_Location() {
 		super();
-		System.out.println("Search_Location");
 	}
 	
 	@BeforeMethod
@@ -28,5 +27,6 @@ public class Search_Location extends TestBase {
 	public void search(){
 		search.search_box.sendKeys("London");
 		search.search_button.click();
+		search.acceptCookie();
 	}
 }
