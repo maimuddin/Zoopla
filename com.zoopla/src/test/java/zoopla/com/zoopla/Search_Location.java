@@ -13,12 +13,13 @@ public class Search_Location extends TestBase {
 	
 	public Search_Location() {
 		super();
+		System.out.println("Search_Location");
 	}
 	
 	@BeforeMethod
 	public void setup(){
-		search = new Search_page();
 		s = new Search_Location();
+		search = new Search_page();
 		initilization();
 	}
 

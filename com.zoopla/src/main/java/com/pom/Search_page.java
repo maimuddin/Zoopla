@@ -15,6 +15,7 @@ public class Search_page extends TestBase {
 	WebElement search_button;
 	
 	public Search_page() {
+		System.out.println("Search_page");
 		PageFactory.initElements(driver,this);
 	}
 	
