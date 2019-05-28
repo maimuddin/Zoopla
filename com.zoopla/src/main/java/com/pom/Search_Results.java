@@ -9,12 +9,12 @@ import org.openqa.selenium.support.How;
 
 public class Search_Results {
 	
-	Search_Results(){	
+	public Search_Results(){	
 	}
 	
-	By getAmount = By.xpath(".//a[contains(@class, 'listing-results-price text-price')]");
+	private By getAmount = By.xpath(".//a[contains(@class, 'listing-results-price text-price')]");
 	
-	By getAddress = By.xpath(".//a[contains(@class, 'listing-results-address')]");
+	private By getAddress = By.xpath(".//a[contains(@class, 'listing-results-address')]");
 	
 	
 	@FindBy(how = How.XPATH, using = "//li[contains(@id, 'listing_')]")

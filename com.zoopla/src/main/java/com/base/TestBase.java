@@ -26,8 +26,6 @@ public class TestBase {
 	}
 
 	public static void initilization() {
-		System.setProperty("webdriver.gecko.driver",
-				System.getProperty("user.dir") + "/src/main/java/com/util/geckodriver.exe");
 		String browser = prop.getProperty("browser");
 		pagetimeout = Integer.parseInt(prop.getProperty("pagetimeout"));
 		impli_timeout = Integer.parseInt(prop.getProperty("implicite_timeout"));
