@@ -67,7 +67,7 @@ public class Search_Results {
 	
 	public void disableLazyImg(int n){
 		if(lazy.isDisplayed()){
-			js.executeScript("arguments[0].click();", lazy);
+			js.executeScript("arguments[0].disabled();", lazy);
 		}
 	}
 }
