@@ -3,14 +3,22 @@ package com.pom;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.Select;
 
-
+/***
+ * 
+ * @author Maimuddin
+ * All the search page webelements should be defined in this class 
+ *
+ */
 public class Search_page {
 	
 	public Search_page() {
 		
 	}
-	
+	/***
+	 * search box WebElement
+	 */
 	@FindBy(how = How.XPATH, using = "//input[@id='search-input-location']")
 	public WebElement search_box;
 	
@@ -19,6 +27,8 @@ public class Search_page {
 	
 	@FindBy(how = How.XPATH, using = "//button[@class = 'button cookie-banner__button']")
 	private WebElement cookie;
+	
+
 	
 	
 	public void acceptCookie() {

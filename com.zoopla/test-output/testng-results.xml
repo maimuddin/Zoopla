@@ -2,23 +2,51 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26902" started-at="2019-05-27T11:02:45Z" finished-at="2019-05-27T11:03:12Z">
+  <suite name="Default suite" duration-ms="241588" started-at="2019-05-29T11:45:08Z" finished-at="2019-05-29T11:49:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26902" started-at="2019-05-27T11:02:45Z" finished-at="2019-05-27T11:03:12Z">
+    <test name="Default test" duration-ms="241588" started-at="2019-05-29T11:45:08Z" finished-at="2019-05-29T11:49:09Z">
       <class name="zoopla.com.zoopla.Search_Location">
-        <test-method status="PASS" signature="setup()[pri:0, instance:zoopla.com.zoopla.Search_Location@1c14f68]" name="setup" is-config="true" duration-ms="26870" started-at="2019-05-27T16:32:45Z" finished-at="2019-05-27T16:33:12Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:zoopla.com.zoopla.Search_Location@1c14f68]" name="setup" is-config="true" duration-ms="43219" started-at="2019-05-29T17:15:08Z" finished-at="2019-05-29T17:15:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="search()[pri:0, instance:zoopla.com.zoopla.Search_Location@1c14f68]" name="search" duration-ms="16" started-at="2019-05-27T16:33:12Z" finished-at="2019-05-27T16:33:12Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="search()[pri:0, instance:zoopla.com.zoopla.Search_Location@1c14f68]" name="search" duration-ms="197697" started-at="2019-05-29T17:15:51Z" finished-at="2019-05-29T17:19:09Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Timeout loading page after 30000ms
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SHIVNARANG-PC', ip: '192.168.135.244', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 5612, moz:profile: C:\Users\Shiv Kumar Narang\..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.1, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: e9fcd48f-d6ba-47c0-913c-ec8fbaadee97]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy7.sendKeys(Unknown Source)
-	at zoopla.com.zoopla.Search_Location.search(Search_Location.java:29)
+              <![CDATA[org.openqa.selenium.TimeoutException: Timeout loading page after 30000ms
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SHIVNARANG-PC', ip: '192.168.135.244', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 5612, moz:profile: C:\Users\Shiv Kumar Narang\..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.1, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: e9fcd48f-d6ba-47c0-913c-ec8fbaadee97
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy7.click(Unknown Source)
+	at zoopla.com.zoopla.Search_Location.search(Search_Location.java:56)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -45,7 +73,7 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->

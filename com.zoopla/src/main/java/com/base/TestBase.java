@@ -8,12 +8,23 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+/***
+ * 
+ * @author Maimuddin
+ * 
+ * This is base class to initialize driver according to browser (Firefox or Chrome only) 
+ *
+ */
+
 public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
 	private static int pagetimeout;
 	private static int impli_timeout;
 
+	/***
+	 * Constructor of TestBase which initialize properties object and load the properties file 
+	 */
 	public TestBase(){
 		prop = new Properties();
 		try{
@@ -25,6 +36,10 @@ public class TestBase {
 		}
 	}
 
+	/***
+	 * This method initialize the driver and open the browser according to mentioned in properties file, Maximize the window, delete all cookies
+	 *  and implement page timeout and implicite timeout  
+	 */
 	public static void initilization() {
 		String browser = prop.getProperty("browser");
 		pagetimeout = Integer.parseInt(prop.getProperty("pagetimeout"));
@@ -42,5 +57,16 @@ public class TestBase {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(pagetimeout, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(impli_timeout, TimeUnit.SECONDS);
+		
+		
 	}
+	
+	/***
+	 * Navigate back from current page
+	 */
+	public static void nevigateBack(){
+		driver.navigate().back();
+	}
+	
+	
 }
