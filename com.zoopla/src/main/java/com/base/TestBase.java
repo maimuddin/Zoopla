@@ -45,7 +45,7 @@ public class TestBase {
 		pagetimeout = Integer.parseInt(prop.getProperty("pagetimeout"));
 		impli_timeout = Integer.parseInt(prop.getProperty("implicite_timeout"));
 		if (browser.equalsIgnoreCase("Chrome")) {
-			System.setProperty("", "");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/main/java/com/util/chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("Firefox")) {
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/src/main/java/com/util/geckodriver.exe");
