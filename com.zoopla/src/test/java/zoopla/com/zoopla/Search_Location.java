@@ -3,6 +3,8 @@ package zoopla.com.zoopla;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -10,6 +12,7 @@ import com.base.TestBase;
 import com.pom.Search_Results;
 import com.pom.Search_page;
 import com.pom.Select_Result;
+import com.util.TakeScreenShot;
 
 public class Search_Location extends TestBase {
 	
@@ -45,14 +48,17 @@ public class Search_Location extends TestBase {
 			String amount = result.getAmountElement(i).getText();
 			String address = result.getAddressElement(i).getText();
 			amount = amount.replaceAll("\\D+", "");
-			//wait.until(ExpectedConditions.elementToBeClickable(result.getAmountElement(i)));
-			//result.closeToolkit();
 			result.disableLazyImg(i);
 			result.getAmountElement(i).click();
 			Assert.assertEquals(s_result.amount.getText().replaceAll("\\D+", ""), amount);
 			Assert.assertEquals(s_result.address.getText(), address);
 			s_result.backToSearch.click();
-			//nevigateBack();
+		}
+	}
+	@AfterMethod
+	public void tearDown(ITestResult result) {
+		if(ITestResult.FAILURE == result.getStatus()) {
+			TakeScreenShot.takeScreenShot(Search_Location.class.getName());
 		}
 	}
 }

@@ -1,5 +1,8 @@
 package com.pom;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -27,8 +30,17 @@ public class Search_page {
 	@FindBy(how = How.XPATH, using = "//button[@class = 'button cookie-banner__button']")
 	private WebElement cookie;
 	
-
+	@FindBy(tagName = "a")
+	private List<WebElement> links;
 	
+
+	public List<WebElement> getLinks() {
+		List<WebElement> list = new ArrayList<WebElement>();
+		for(WebElement el : links) {
+			list.add(el);
+		}
+		return list;
+	}
 	
 	public void acceptCookie() {
 		if(cookie.isDisplayed()) {

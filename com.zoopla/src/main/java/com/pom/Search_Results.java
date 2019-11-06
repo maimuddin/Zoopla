@@ -33,7 +33,11 @@ public class Search_Results {
 	 * @return WebElement object
 	 */
 	public WebElement getAmountElement(int n){
-			return results.get(n-1).findElement(getAmount);	
+		WebElement elm = results.get(n-1).findElement(getAmount);
+		if(!elm.isDisplayed()) {
+			js.executeScript("arguments[0].scrollIntoView()", elm);
+		}
+			return elm;	
 	}
 	
 	/***
